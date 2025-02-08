@@ -19,7 +19,7 @@ function convertToRoman(num) {
 	let result = '';
 
   // Iterate over the obj from the highest value to the smallest
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 13; i++) {
     const [roman, value] = obj[i]; // Access the Roman numeral and value pair
 
     while (num >= value) {
