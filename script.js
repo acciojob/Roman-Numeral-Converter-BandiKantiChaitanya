@@ -10,6 +10,19 @@ function convertToRoman(num) {
     };
 
   //your code here
+	let result = '';
+
+  // Iterate over the obj from the highest value to the smallest
+  for (let i = 0; i < 7; i++) {
+    const [roman, value] = obj[i]; // Access the Roman numeral and value pair
+
+    while (num >= value) {
+      result += roman;  // Append the Roman numeral to the result
+      num -= value;     // Subtract the value from num
+    }
+  }
+
+  return result;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
